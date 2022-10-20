@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 검색엔진 최적화 (SEO) -->
+    <meta name="description" content="기계가 웹페이지를 효과적으로 이해할 수 있도록 사용하는 메타 태그에 대해서 알아보겠습니다.">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Dale Seo">
+    <meta name="og:site_name" content="달레의 블로그" />
+    <meta name="og:title" content="메타 태그를 통한 검색엔진 최적화" />
+    <meta name="og:description" content="기계가 웹페이지를 효과적으로 이해할 수 있도록 사용하는 메타 태그에 대해서 알아보겠습니다." />
+    <meta name="og:type" content="website" />
+    <meta name="og:url" content="https://www.daleseo.com/html-meta" />
+
+    <!-- 썸네일 권장크기 1200*630 -->
+    <meta name="og:image" content="https://www.daleseo.com/html-meta/thumbnail.png" />
+
+    <title>MS Portfolio</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <!-- 프로그래스바와 스크롤하면 내려오고 그 전에는 안보이는 네비게이션 하기 -->
+    <header>
+        <div class="layout">
+            <div class="hd_pc">
+                <div class="hd_logo">
+                    <a href="#">
+                        <img src="img/hd_logo.png" alt="홈페이지 로고">
+                    </a>
+                </div> <!-- .hd_logo -->
+                
+                <div class="nav">
+                    <ul class="gnb">
+                        <li class="gnb_item"><a href="#">About</a></li>
+                        <li class="gnb_item"><a href="#">Work</a></li>
+                        <li class="gnb_item"><a href="#">Contact</a></li>
+                        <li class="gnb_item btn_send"><a href="#">Send me an email</a></li>
+                    </ul> <!-- .gnb -->
+                </div> <!-- .nav -->
+            </div> <!-- .hd_pc -->
+
+            <div class="hd_m" style="display: none;">
+                <div class="hd_logo">
+                    <a href="#">
+                        <img src="img/hd_logo.png" alt="홈페이지 로고">
+                    </a>
+                </div> <!-- .hd_logo -->
+
+                <button class="btn_menu">
+                    <span class="blind">헤더 메뉴 버튼</span>
+                </button>
+
+                <div class="nav_m">
+                    <ul class="gnb">
+                        <li class="gnb_item"><a href="#">About</a></li>
+                        <li class="gnb_item"><a href="#">Work</a></li>
+                        <li class="gnb_item"><a href="#">Contact</a></li>
+                        <li class="gnb_item btn_send"><a href="#">Send me an email</a></li>
+                    </ul> <!-- .gnb -->
+                </div> <!-- .nav_m -->
+            </div> <!-- .hd_m -->
+        </div> <!-- .layout -->
+    </header>
+
+    <main>
+        <section class="main">
+            <div class="layout">
+                <div class="wr">
+                    <div class="left">
+                        <h2 class="main_txt">
+                            For<br>
+                            <b>Semantic</b><br>
+                            Design
+                        </h2>
+    
+                        <p class="sub_txt">
+                            당신을 위해 물음표를 그리는<br>
+                            <strong>웹 · 그래픽 디자이너 김미선</strong>입니다.
+                        </p>
+                    </div> <!-- .left -->
+    
+                    <div class="right">
+                        <img src="img/main_img.png" alt="메인 이미지 (연필과 물음표)">
+                    </div> <!-- .right -->
+                </div> <!-- .wr -->
+            </div> <!-- .layout -->
+        </section> <!-- .main -->
+
+        <section class="about">
+                <div class="intro">
+                    <div class="layout">
+                        <div class="wr">
+                            <h3 class="tit">
+                                <strong>다재다능한 디자이너</strong>를<br>
+                                찾아 헤메는 당신께.
+                            </h3> <!-- .tit -->
+    
+                            <p class="sub_txt">
+                                이제 더이상 힘들게 찾으실 필요 없습니다. 바로 여기있거든요.<br>
+                                웹디자인, 웹퍼블리싱, 편집디자인, 영상편집, 드로잉, 문서작업 등
+                                참 쓸모 많은 디자이너 김미선입니다.
+                            </p> <!-- .sub_txt -->
+                        </div> <!-- .wr -->
+                    </div> <!-- .layout -->
+                </div> <!-- .intro -->
+
+                <div class="info">
+                    <div class="layout">
+                        <div class="img_wr">
+                            <img src="img/about_img.png" alt="자기소개 본인 일러스트">
+                        </div> <!-- .left -->
+    
+                        <div class="info_wr">
+                            <div class="left">
+                                <div class="txt_wr">
+                                    <h4 class="tit">WHO .</h4>
+    
+                                    <ul class="sub_txt">
+                                        <li>김미선</li>
+                                        <li>2000. 08. 08</li>
+                                    </ul>
+                                </div> <!-- .txt_wr -->
+    
+                                <div class="txt_wr">
+                                    <h4 class="tit">CONTACT .</h4>
+    
+                                    <ul class="sub_txt">
+                                        <li><a href="tel:010-4342-7580">010-4342-7580</a></li>
+                                        <li><a href="mail:rlaaltjs7580@naver.com">rlaaltjs7580@naver.com</a></li>
+                                    </ul>
+                                </div> <!-- .txt_wr -->
+    
+                                <div class="txt_wr">
+                                    <h4 class="tit">ACTIVITES .</h4>
+    
+                                    <ul class="sub_txt">
+                                        <li>
+                                            <span class="date">2018. 03 ~ 2018. 10</span>
+                                            인터넷윤리 창작 콘텐츠 공모전 (동영상)
+                                        </li>
+                                    </ul>
+                                </div> <!-- .txt_wr -->
+    
+                                
+                            </div> <!-- .left -->
+    
+                            <div class="right">
+                                <div class="txt_wr">
+                                    <h4 class="tit">HISTORY .</h4>
+    
+                                    <ul class="sub_txt">
+                                        <li>
+                                            <span class="date">2021.08 ~ 2022.01</span>
+                                            (주)지니소프트 R&D팀<br>
+                                            웹 디자인, 웹 퍼블리싱, 편집 디자인 업무 담당
+                                        </li>
+                                        <li>
+                                            <span class="date">2019.07 ~ 2020.06</span>
+                                            SBS컴퓨터아카데미 포토샵 · 일러스트 심화반,<br>
+                                            UX·UI 디자인, 웹퍼블리셔 과정 수료
+                                        </li>
+                                        <li>
+                                            <span class="date">2018.03 ~ 2018.12</span>
+                                            호남직업전문학교 광고영상제작 과정 수료
+                                        </li>
+                                        <li>
+                                            <span class="date">2016.03 ~ 2019.02</span>
+                                            전남여자고등학교 졸업
+                                        </li>
+                                    </ul>
+                                </div> <!-- .txt_wr -->
+                            </div> <!-- .right -->
+                        </div> <!-- .info_wr -->
+                    </div> <!-- .layout -->
+                </div> <!-- .info -->
+
+                <!-- 전체적으로 내용 다시 점검하고 다시 작성하기 -->
+                <div class="skill">
+                    <div class="layout">
+                        <h3 class="tit">Skill</h3>
+    
+                        <div class="wr">
+                            <div class="txt_wr">
+                                <h4 class="tit">일러스트, 포토샵</h4>
+        
+                                <p class="sub_txt">
+                                    웹디자인, 편집디자인, 그래픽디자인 등 여러 디자인 작업을 무리없이 
+                                    가능합니다. 포토샵으론 사진보정, 누끼따기, 합성, 웹디자인 시안 
+                                    제작 등 가능합니다. 일러스트로는 도형툴과 펜툴 등을 이용해 벡터 
+                                    일러스트를 그릴 수 있고, 편집디자인(명함, 포스터, 현수막 등) 
+                                    작업을 할 수 있습니다.
+                                </p>
+                            </div> <!-- .txt_wr -->
+        
+                            <div class="txt_wr">
+                                <h4 class="tit">jquery, javascript</h4>
+        
+                                <p class="sub_txt">
+                                    웹사이트에 필요한 애니메이션 또는 이용자와 상호작용이 필요한 요소들을 제작합니다. 항상 탐색을 최소화하면서 어떻게 더 효율적인 코드를 쓸 수 있을까 고민하며 구글링을 합니다.
+                                </p>
+                            </div> <!-- .txt_wr -->
+        
+                            <div class="txt_wr">
+                                <h4 class="tit">반응형 웹페이지 제작 가능</h4>
+        
+                                <p class="sub_txt">
+                                    미디어 쿼리문을 이용해 주요 기기(pc, 태블릿, 모바일)의 폭에 맞춤 제작, 처음 만들 때부터 반응형 웹페이지를 염두에 두고 컨텐츠가 어떻게 줄어들고 늘어날지 생각하며 디자인함. 
+                                    제작 후에는 주변 기기들을 최대한 빌려와 어떤 환경이든 불편함이 없는지 꼭 테스트함.
+                                </p>
+                            </div> <!-- .txt_wr -->
+        
+                            <div class="txt_wr">
+                                <h4 class="tit">크로스 브라우징 고려해 제작 가능</h4>
+        
+                                <p class="sub_txt">
+                                    IE에서 잘 나오는지 염두에 두면서 작업. 최대한 ie 이용자들도 웹사이트를 사용하는데 문제가 없도록(다른 브라우저 이용자들과 최대한 비슷한 사용감을 느끼도록) 제작하고있음. 
+                                    IE에서 나오지 않는 코드들은 대체 가능한 코드로 수정함. 사용하려는 태그나 속성들이 어느 브라우저까지 지원하는지 고려하고 작업에 들어감. 그리고 애플 사파리 브라우저도 확인하면서 잘 나오는지 확인.
+                                </p>
+                            </div> <!-- .txt_wr -->
+        
+                            <div class="txt_wr">
+                                <h4 class="tit">프리미어 프로, 애프터 이펙트(영상편집 툴)</h4>
+        
+                                <p class="sub_txt">
+                                    컷편집, 자막넣기, 색보정, 누끼따기, 음향편집을 하며 간단한 영상을 제작할 수 있습니다.
+                                </p>
+                            </div> <!-- .txt_wr -->
+        
+                            <div class="txt_wr">
+                                <h4 class="tit">문서작업</h4>
+        
+                                <p class="sub_txt">
+                                    아래한글, 파워포인트 능숙하게 가능. 엑셀은 기본적인 기능만 사용할 수 있지만 예전에 자격증을 딴 적 있기 때문에 모르는 기능은 검색하면서 적절하게 사용 가능.
+                                </p>
+                            </div> <!-- .txt_wr -->
+                        </div> <!-- .wr -->
+                    </div> <!-- .layout -->
+                </div> <!-- .skill -->
+
+                <div class="license">
+                    <div class="layout">
+                        <h3 class="tit">
+                            저는 이런 <strong>자격증</strong>을<br>
+                            가지고 있습니다.
+                        </h3> <!-- .tit -->
+    
+                        <ul class="sub_txt">
+                            <li>
+                                <span class="date">2018.12</span>
+                                컴퓨터그래픽스운용기능사, GTQ 포토샵 1급
+                            </li>
+                            <li>
+                                <span class="date">2018.07</span>
+                                GTQ 일러스트 2급
+                            </li>
+                            <li>
+                                <span class="date">2018.05</span>
+                                디지털정보활용능력 (DIAT) 스프레드시트, 아래한글, 프레젠테이션 고급
+                            </li>
+                            <li>
+                                <span class="date">2018.04</span>
+                                디지털영상편집2급
+                            </li>
+                        </ul> <!-- .sub_txt -->
+                    </div> <!-- .layout -->
+                </div> <!-- .license -->
+        </section> <!-- .about -->
+ 
+        <section class="work">
+            <div class="layout">
+                <h3 class="tit">Work</h3>
+
+                <ul class="cate">
+                    <li class="cate_menu cate_1"><a href="#">All</a></li>
+                    <li class="cate_menu cate_2"><a href="#">Web</a></li>
+                    <li class="cate_menu cate_3"><a href="#">App</a></li>
+                    <li class="cate_menu cate_4"><a href="#">Graphic</a></li>
+                </ul> <!-- .cate -->
+
+                <div class="work_wr">
+                    <div class="work_item">
+                        <a href="">
+                            <h4 class="tit"></h4>
+                            
+                        </a>
+                    </div>
+                </div> <!-- .work_wr -->
+            </div> <!-- .layout -->
+        </section> <!-- .work -->
+
+        <section class="contact">
+            <div class="layout">
+                <div class="left">
+                    <h3 class="tit">Contact</h3>
+    
+                    <p class="sub_txt">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aliquam id nisl aliquet elit blandit egestas.
+                        Praesent commodo odio magna, volutpat vehicula purus aliquam ut.
+                        Cras malesuada diam nec dui pretium, a blandit est facilisis.
+                    </p>
+                    
+                    <a class="btn_send" href="mail:">Send me an email</a>
+                </div> <!-- .left -->
+
+                <div class="right">
+                    <img src="img/contact_img.png" alt="메일 보내기">
+                </div> <!-- .right -->
+            </div> <!-- .layout -->
+        </section> <!-- .contact -->
+    </main>
+
+    <footer>
+        <div class="layout">
+            <div class="ft_logo">
+                <a href="#">
+                    <img src="img/ft_logo.png" alt="홈페이지 하단 로고">
+                </a>
+            </div> <!-- .ft_logo -->
+    
+            <ul class="ft_menu">
+                <li class="gnb_item"><a href="#">About</a></li>
+                <li class="gnb_item"><a href="#">Work</a></li>
+                <li class="gnb_item"><a href="#">Contact</a></li>
+            </ul> <!-- .ft_menu -->
+    
+            <p class="copy">
+                Copyright 2022. Kim Mi seon All rights reserved.
+            </p>
+        </div> <!-- .layout -->
+    </footer>
+
+    <!-- 아이콘 사진으로 대체할것 -->
+    <button id="btn_top">
+        ↑
+        <span class="blind">페이지 최상단으로</span>
+    </button>
+</body>
+</html>
