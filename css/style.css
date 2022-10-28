@@ -240,6 +240,27 @@ header .hd_pc .nav .gnb .gnb_item.btn_send a {
 	color: #333;
 	font-weight: 600;
 }
+.work .work_wr {
+	display: flex;
+	flex-wrap: wrap;
+}
+.work .work_wr .work_item {
+	position: relative;
+	width: 50%;
+}
+.work .work_wr .work_item > a {
+	display: block;
+}
+.work .work_wr .work_item > a > img {
+	display: block;
+	width: 100%;
+}
+.work .work_wr .work_item > a .txt_box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 
 
 
