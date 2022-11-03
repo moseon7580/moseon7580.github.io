@@ -53,6 +53,24 @@ header .hd_pc .nav .gnb .gnb_item a {
 	display: block;
 	padding: 12px 8px;
 	font-weight: 600;
+	position: relative;
+}
+header .hd_pc .nav .gnb .gnb_item:not(.btn_send) a::before {
+	display: block;
+	content: "";
+	clear: both;
+	width: 0%;
+	height: 7px;
+	background: #ffe900;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-12deg);
+	z-index: -1;
+	transition: .2s;
+}
+header .hd_pc .nav .gnb .gnb_item:not(.btn_send):hover a::before {
+	width: 88%;
 }
 header .hd_pc .nav .gnb .gnb_item.btn_send a {
 	border-right: 1px solid #333;
