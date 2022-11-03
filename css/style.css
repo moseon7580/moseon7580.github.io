@@ -75,12 +75,17 @@ header .hd_pc .nav .gnb .gnb_item:not(.btn_send):hover a::before {
 header .hd_pc .nav .gnb .gnb_item.btn_send a {
 	border-right: 1px solid #333;
 	border-left: 1px solid #333;
+	transition: .2s;
+}
+header .hd_pc .nav .gnb .gnb_item.btn_send:hover a {
+	color: #fff;
+	background: #333;
 }
 
 
 /* 메인 */
 .main {
-	background-color: #ffe900;
+	background: #ffe900;
 	margin-bottom: 180px;
 }
 .main .layout .wr {
@@ -395,12 +400,36 @@ footer .copy {
 
 
 /* 미디어 쿼리 */
-@media (max-width: 1280px) {
+@media (max-width: 1200px) {
 	
 }
 
 @media (max-width: 992px) {
-	
+	.about .intro .wr {
+		display: block;
+		text-align: center;
+	}
+	.about .intro .tit {
+		margin-bottom: 20px;
+		line-height: 1.2;
+	}
+	.about .intro .sub_txt {
+		max-width: 100%;
+		line-height: 1.5;
+	}
+
+
+
+	.about .info .layout {
+		align-items: flex-start;
+		justify-content: space-around;
+	}
+	.about .info .info_wr {
+		display: block;
+	}
+	.about .info .info_wr .left {
+		margin-bottom: 70px;
+	}
 }
 
 @media (max-width: 768px) {
