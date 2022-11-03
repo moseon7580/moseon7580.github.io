@@ -393,9 +393,22 @@ footer .copy {
 
 /* 페이지 최상단 버튼 */
 #btn_top {
-	position: fixed;
-	right: 0;
-	bottom: 0;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+	transition: .2s;
+	color: transparent;
+	background-color: #FEE140;
+	background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);	
+	opacity: .6;
+}
+#btn_top:hover {
+	opacity: 1;
 }
 
 
@@ -405,6 +418,24 @@ footer .copy {
 }
 
 @media (max-width: 992px) {
+	.main .left .main_txt {
+		font-size: 4.375rem;
+		margin-bottom: 32px;
+	}
+	.main .left .sub_txt {
+		font-size: 1.25rem;
+	}
+	.main .right {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.main .right img {
+		width: 80%;
+	}
+	
+	
+	
 	.about .intro .wr {
 		display: block;
 		text-align: center;
@@ -417,18 +448,42 @@ footer .copy {
 		max-width: 100%;
 		line-height: 1.5;
 	}
-
-
-
+	
+	
+	
 	.about .info .layout {
 		align-items: flex-start;
 		justify-content: space-around;
+	}
+	.about .info .img_wr img {
+		width: 86%;
 	}
 	.about .info .info_wr {
 		display: block;
 	}
 	.about .info .info_wr .left {
 		margin-bottom: 70px;
+	}
+
+
+
+	.about .skill .txt_wr:nth-child(odd) {
+		margin-right: 32px;
+	}
+	.about .skill .txt_wr:nth-child(even) {
+		margin-left: 32px;
+	}
+
+
+
+	.contact .left {
+		width: 60%;
+	}
+	.contact .right {
+		width: 40%;
+	}
+	.contact .right img {
+		width: 100%;
 	}
 }
 
