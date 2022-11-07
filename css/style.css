@@ -82,6 +82,28 @@ header .hd_pc .nav .gnb .gnb_item.btn_send:hover a {
 	background: #333;
 }
 
+header .hd_m {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .hd_m .hd_logo {
+	z-index: 100;
+}
+header .hd_m .btn_menu {
+	z-index: 100;
+}
+header .hd_m .nav_m {
+	position: fixed;
+    background: #fff;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+	padding-top: 120px;
+	text-align: center;
+}
+
 
 /* 메인 */
 .main {
