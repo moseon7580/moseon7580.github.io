@@ -403,8 +403,8 @@ footer .copy {
     border-radius: 50%;
 	transition: .2s;
 	color: transparent;
-	background: url("../img/btn_top_arrow.png") no-repeat center center, #FEE140 linear-gradient(90deg, #FEE140 0%, #FA709A 100%);;
-
+	background: url("../img/btn_top_arrow.png") no-repeat center center, #FEE140 linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+	opacity: .6;
 }
 #btn_top:hover {
 	opacity: 1;
