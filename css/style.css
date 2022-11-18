@@ -111,8 +111,9 @@ header .hd_m .nav_m.show_list {
 	visibility: visible;
 }
 header .hd_m .nav_m .gnb .gnb_item {
-	font-size: 3.375rem;
+	font-size: 2.5rem;
     font-weight: 700;
+	text-transform: uppercase;
 }
 header .hd_m .btn_menu {
 	z-index: 100;
