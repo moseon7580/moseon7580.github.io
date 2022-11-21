@@ -1,4 +1,14 @@
 $(function () {
+    // top 버튼
+    $("#btn_top").click(function() {
+        $('html, body').animate({
+            scrollTop : 0
+        }, 400);
+        
+        return false;
+    });
+
+
     // 헤더
     $(".btn_menu").click(function () {
         $(this).toggleClass("on");
