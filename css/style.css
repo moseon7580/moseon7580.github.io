@@ -3,10 +3,9 @@
 	font-family: 'Material Symbols Outlined';
 	font-style: normal;
 	font-weight: 400;
-	src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v71/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1n-q_4MrImHCIJIZrDCvHOej.woff2) format('woff2');
-  }
-  
-  .material-symbols-outlined {
+	src: url(font/google_icon/google_icon.woff2) format('woff2');
+}  
+.material-symbols-outlined {
 	font-family: 'Material Symbols Outlined';
 	font-weight: normal;
 	font-style: normal;
@@ -20,7 +19,7 @@
 	direction: ltr;
 	-webkit-font-feature-settings: 'liga';
 	-webkit-font-smoothing: antialiased;
-  }
+}
 
 /* 폰트 설정 */
 @font-face {
@@ -65,11 +64,13 @@ header {
 	top: 0;
 	z-index: 999;
 	height: 60px;
+	
 }
 header .hd_pc {
 	display: flex;
     align-items: center;
     justify-content: space-between;
+	backdrop-filter: blur(5px);
 }
 header .hd_pc .hd_logo a {
 	display: block;
@@ -82,7 +83,7 @@ header .hd_pc .nav .gnb {
 }
 header .hd_pc .nav .gnb .gnb_item a {
 	display: block;
-	padding: 22px 8px;
+	padding: 22px 12px;
 	font-weight: 600;
 	position: relative;
 	transition: .3s;
@@ -110,11 +111,17 @@ header .hd_pc .nav .gnb .gnb_item:not(.btn_send):hover a::before {
 header .hd_pc .nav .gnb .gnb_item.btn_send a {
 	/* border-right: 1px solid #333;
 	border-left: 1px solid #333; */
-	transition: .2s;
+	/* transition: .2s; */
+	padding: 16.5px;
 }
-header .hd_pc .nav .gnb .gnb_item.btn_send:hover a {
-	color: #fff;
-	background: #333;
+header .hd_pc .nav .gnb .gnb_item.btn_send a span {
+	transition: .3s;
+}
+header .hd_pc .nav .gnb .gnb_item.btn_send:hover a span {
+	/* color: #fff;
+	background: #333; */
+
+	transform: rotate(-30deg);
 }
 
 header .hd_m {
@@ -125,6 +132,10 @@ header .hd_m {
 }
 header .hd_m .hd_logo {
 	z-index: 100;
+}
+header .hd_m .hd_logo a {
+    display: block;
+    padding: 14.5px 6px;
 }
 header .hd_m .nav_m {
 	position: fixed;
@@ -169,7 +180,7 @@ header .hd_m .btn_menu {
 	width: 30px;
 	height: 25px;
 	cursor: pointer;
-	padding: 7.5px 0;
+	padding: 17.5px 0;
 }
 header .hd_m .btn_menu span {
     background-color: #333;
@@ -613,6 +624,23 @@ footer .copy {
 	}
 	header .hd_m {
 		display: flex;
+	}
+
+
+	.about .skill .wr {
+		display: block;
+	}
+	.about .skill .txt_wr {
+		margin: 60px 0;
+	}
+	.about .skill .txt_wr:first-child {
+		margin-top: 30px;
+	}
+	.about .skill .txt_wr:nth-child(odd) {
+		margin-right: 0;
+	}
+	.about .skill .txt_wr:nth-child(even) {
+		margin-left: 0;
 	}
 }
 
