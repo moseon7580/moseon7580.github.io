@@ -9,7 +9,29 @@ $(function () {
     });
 
 
-    // 헤더
+    // 헤더 메뉴, 푸터 메뉴 클릭 시 해당 요소로 스크롤
+    $(".gnb .gnb_item a").click(function (e) {
+        e.preventDefault();
+        
+        if ($(this).parent().filter(".gnb_item_m")) {
+            $("html, body").animate({
+                // window location.hash 속성
+                scrollTop: $(this.hash).offset().top
+            }, 500);
+            // console.log("mobile menu");
+            
+            $("header .hd_m .btn_menu").removeClass("on");
+            $("header .hd_m .nav_m").removeClass("show_list");
+            // console.log("close menu");
+        } else {
+            $("html, body").animate({
+                // window location.hash 속성
+                scrollTop: $(this.hash).offset().top
+            }, 500);
+        }
+    });
+    
+    // 모바일 헤더 메뉴 표출
     $(".btn_menu").click(function () {
         $(this).toggleClass("on");
         $(".nav_m").toggleClass("show_list");
@@ -17,7 +39,7 @@ $(function () {
 
 
     // works 게시물 분류
-    $(".work .cate .cate_menu a").click(function (e) {
+    $("#work .cate .cate_menu a").click(function (e) {
         e.preventDefault();
 
         // 변수 중복 선언을 막기위해 let 사용 (재할당은 가능.)
@@ -32,4 +54,12 @@ $(function () {
             $(".work_wr .work_item[class*="+cate+"]").show();
         }
     });
+
+
+    // ie로 접속시 경고창
+    var agent = navigator.userAgent.toLowerCase();
+
+    if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) {
+        alert('Internet Explorer는 호환되지 않는 브라우저 입니다. \n다른 브라우저를 이용해주세요.')
+    }
 }); // document.onready
