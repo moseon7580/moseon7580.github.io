@@ -41,6 +41,8 @@ $(function () {
     // works 게시물 분류
     $("#work .cate .cate_menu a").click(function (e) {
         e.preventDefault();
+        $("#work .cate .cate_menu").removeClass("on");
+        $(this).parent().addClass("on");
 
         // 변수 중복 선언을 막기위해 let 사용 (재할당은 가능.)
         let cate = $(this).attr("title");
