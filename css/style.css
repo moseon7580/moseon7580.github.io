@@ -615,6 +615,11 @@ footer .copy {
 	}
 
 
+	#work .work_wr .work_item > a .txt_box .txt_box_wr {
+		top: 91%;
+	}
+
+
 
 	#contact .left {
 		width: 60%;
@@ -639,6 +644,11 @@ footer .copy {
 	}
 
 
+	#main .right img {
+		width: 65%;
+	}
+
+
 	#about .skill .wr {
 		display: block;
 	}
@@ -653,6 +663,17 @@ footer .copy {
 	}
 	#about .skill .txt_wr:nth-child(even) {
 		margin-left: 0;
+	}
+
+
+	#work .work_wr {
+		display: block;
+	}
+	#work .work_wr .work_item {
+		width: 100%;
+	}
+	#work .work_wr .work_item > a .txt_box .txt_box_wr {
+		top: 93%;
 	}
 }
 
