@@ -36,11 +36,11 @@ $(function () {
 
         if (st > lastScrollTop && st > navbarHeight){
             // 스크롤을 내렸을 때
-            $("header").slideUp("fast"); // header 숨기기
+            $("header").slideUp("200"); // header 숨기기
         } else {
             // 스크롤을 올렸을 때
             if(st + $(window).height() < $(document).height()) {
-                $("header").slideDown("fast"); // header 보이기
+                $("header").slideDown("200"); // header 보이기
             }
         }
 
@@ -73,6 +73,7 @@ $(function () {
     // 모바일 헤더 메뉴 표출
     $(".btn_menu").click(function () {
         $(this).toggleClass("on");
+        $("html, body").toggleClass("scroll_disable");
         $(".nav_m").toggleClass("show_list");
     });
 
