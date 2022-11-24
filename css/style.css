@@ -540,15 +540,16 @@ footer .copy {
     border: none;
     border-radius: 50%;
 	transition: .2s;
-	color: #fff;
-	background: #FEE140 linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
-	opacity: .6;
-}
-#btn_top:hover {
-	opacity: 1;
+	color: #333;
+	background-color: #fff;
+	border: 1px solid #eee;
 }
 #btn_top span {
-	font-size: 2.25rem;
+	transform: scale(1.2);
+	transition: .2s;
+}
+#btn_top:hover span {
+	transform: translateY(-3px) scale(1.2);
 }
 
 
@@ -666,6 +667,9 @@ footer .copy {
 	}
 
 
+}
+
+@media (max-width: 576px) {
 	#work .work_wr {
 		display: block;
 	}
@@ -675,10 +679,6 @@ footer .copy {
 	#work .work_wr .work_item > a .txt_box .txt_box_wr {
 		top: 93%;
 	}
-}
-
-@media (max-width: 576px) {
-	
 }
 
 @media (max-width: 320px) {
