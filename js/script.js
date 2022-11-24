@@ -9,6 +9,45 @@ $(function () {
     });
 
 
+    // 스크롤에 반응하는 헤더
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5; // 이벤트를 발생시킬 스크롤의 이동 범위
+    var navbarHeight = $("header").outerHeight();
+
+    $(window).scroll(function(event){
+        didScroll = true;
+    });
+
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250); // 스크롤이 멈춘 후 동작이 실행되기 까지의 딜레이
+
+    function hasScrolled() {
+        var st = $(this).scrollTop(); // 현재 window의 scrollTop 값
+
+        // delta로 설정한 값보다 많이 스크롤 되어야 실행된다.
+        // Math.abs() 함수: 파라미터로 입력된 x의 절대값을 리턴.
+        if(Math.abs(lastScrollTop - st) <= delta)
+            return;
+
+        if (st > lastScrollTop && st > navbarHeight){
+            // 스크롤을 내렸을 때
+            $("header").slideUp("fast"); // header 숨기기
+        } else {
+            // 스크롤을 올렸을 때
+            if(st + $(window).height() < $(document).height()) {
+                $("header").slideDown("fast"); // header 보이기
+            }
+        }
+
+        lastScrollTop = st; // 현재 멈춘 위치를 기준점으로 재설정
+    }
+
+
     // 헤더 메뉴, 푸터 메뉴 클릭 시 해당 요소로 스크롤
     $(".gnb .gnb_item a").click(function (e) {
         e.preventDefault();
