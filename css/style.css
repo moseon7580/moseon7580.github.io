@@ -55,6 +55,10 @@ a {
 .scroll_disable {
 	overflow: hidden;
 }
+/* #about .intro .tit,
+#about .skill h3.tit,
+#about .license .tit, */
+
 
 
 /* 헤더 */
@@ -648,11 +652,65 @@ footer .copy {
 	}
 
 
+	#about .intro .tit {
+		font-size: 1.875rem;
+	}
+	#about .intro .sub_txt {
+		font-size: 1rem;
+	}
+	
+	#main .left .main_txt {
+		font-size: 3.375rem;
+	}
+	#main .left .sub_txt {
+		font-size: 1.125rem;
+	}
 	#main .right img {
 		width: 65%;
 	}
+	
 
+	#about .info .layout {
+		justify-content: space-around;
+	}
+	/* #about .info .img_wr {
+		width: 50%;
+	} */
+	#about .info .img_wr img {
+		width: 80%;
+	}
+	#about .info .info_wr {
+		width: 50%;
+	}
+	#about .info .info_wr .left {
+		margin-right: 0;
+		margin-bottom: 50px;
+	}
+	#about .info .info_wr .txt_wr:not(:last-child) {
+		margin-bottom: 50px;
+	}
+	#about .info .info_wr .txt_wr .tit {
+		font-size: 1rem;
+		/* font-size: 1.125rem; */
+		margin-bottom: 16px;
+	}
+	#about .info .info_wr .txt_wr .sub_txt {
+		font-size: 0.875rem;
+		/* font-size: 1rem; */
+	}
+	#about .info .info_wr .txt_wr .sub_txt li:not(:last-child) {
+		margin-bottom: 8px;
+	}
+	#about .info .info_wr .txt_wr .sub_txt li .date {
+		font-size: 0.75rem;
+	}
 
+	#about .skill h3.tit {
+		font-size: 1.875rem;
+	}
+	#about .skill h4.tit {
+		font-size: 1rem;
+	}
 	#about .skill .wr {
 		display: block;
 	}
@@ -668,8 +726,13 @@ footer .copy {
 	#about .skill .txt_wr:nth-child(even) {
 		margin-left: 0;
 	}
+	#about .skill .txt_wr .sub_txt {
+		font-size: 0.875rem;
+	}
 
-
+	#about .license .tit {
+		font-size: 1.875rem;
+	}
 }
 
 @media (max-width: 576px) {
