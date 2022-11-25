@@ -36,10 +36,12 @@ html, body {
 }
 
 
+
 /* 웹 접근성 */
 .blind {
 	display: none;
 }
+
 
 
 /* 공통 CSS */
@@ -55,16 +57,16 @@ a {
 .scroll_disable {
 	overflow: hidden;
 }
-/* #about .intro .tit,
-#about .skill h3.tit,
-#about .license .tit, */
+.tit {
+	font-size: 2.25rem;
+    font-weight: 500;
+	line-height: 1.3;
+}
 
 
 
 /* 헤더 */
 header {
-	/* border-bottom: 1px solid #333;
-	background: #fff; */
 	position: fixed;
 	left: 0;
 	right: 0;
@@ -98,7 +100,7 @@ header .hd_pc .nav .gnb .gnb_item a {
 header .hd_pc .nav .gnb .gnb_item:hover a {
 	font-weight: 900;
 }
-header .hd_pc .nav .gnb .gnb_item a:not(.btn_send)::before {
+header .hd_pc .nav .gnb .gnb_item a::before {
 	display: block;
 	content: "";
 	clear: both;
@@ -112,23 +114,8 @@ header .hd_pc .nav .gnb .gnb_item a:not(.btn_send)::before {
 	z-index: -1;
 	transition: .2s;
 }
-header .hd_pc .nav .gnb .gnb_item:hover a:not(.btn_send)::before {
+header .hd_pc .nav .gnb .gnb_item:hover a::before {
 	width: 88%;
-}
-header .hd_pc .nav .gnb .gnb_item .btn_send {
-	/* border-right: 1px solid #333;
-	border-left: 1px solid #333; */
-	/* transition: .2s; */
-	padding: 16.5px;
-}
-header .hd_pc .nav .gnb .gnb_item .btn_send span {
-	transition: .3s;
-}
-header .hd_pc .nav .gnb .gnb_item .btn_send:hover span {
-	/* color: #fff;
-	background: #333; */
-
-	transform: rotate(-30deg) scale(1.06);
 }
 
 header .hd_m {
@@ -260,7 +247,6 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 /* ABOUT */
 #about {
 	padding-top: 180px;
-
 }
 #about .intro {
 	margin-bottom: 180px;
@@ -271,10 +257,7 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 	align-items: center;
 }
 #about .intro .tit {
-	font-size: 2.25rem;
-	font-weight: 500;
 	color: #b4b4b4;
-	line-height: 1.3;
 }
 #about .intro .tit strong {
 	color: #333;
@@ -304,7 +287,7 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 #about .info .info_wr .txt_wr:not(:last-child) {
 	margin-bottom: 70px;
 }
-#about .info .info_wr .txt_wr .tit {
+#about .info .info_wr .txt_wr .sub_tit {
 	font-size: 1.25rem;
 	font-weight: 700;
 	margin-bottom: 22px;
@@ -342,13 +325,10 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 	display: grid;
     grid-template-columns: 1fr 1fr;
 }
-#about .skill h3.tit {
-	font-size: 2.25rem;
-    font-weight: 500;
-    line-height: 1.3;
+#about .skill .tit {
 	margin-bottom: 20px;
 }
-#about .skill h4.tit {
+#about .skill .sub_tit {
 	font-size: 1.125rem;
 	font-weight: 700;
 	margin-bottom: 14px;
@@ -641,6 +621,11 @@ footer .copy {
 }
 
 @media (max-width: 768px) {
+	.tit {
+		font-size: 1.875rem;
+	}
+
+	
 	header {
 		backdrop-filter: initial;
 	}
@@ -652,9 +637,6 @@ footer .copy {
 	}
 
 
-	#about .intro .tit {
-		font-size: 1.875rem;
-	}
 	#about .intro .sub_txt {
 		font-size: 1rem;
 	}
@@ -673,9 +655,6 @@ footer .copy {
 	#about .info .layout {
 		justify-content: space-around;
 	}
-	/* #about .info .img_wr {
-		width: 50%;
-	} */
 	#about .info .img_wr img {
 		width: 80%;
 	}
@@ -689,14 +668,12 @@ footer .copy {
 	#about .info .info_wr .txt_wr:not(:last-child) {
 		margin-bottom: 50px;
 	}
-	#about .info .info_wr .txt_wr .tit {
+	#about .info .info_wr .txt_wr .sub_tit {
 		font-size: 1rem;
-		/* font-size: 1.125rem; */
 		margin-bottom: 16px;
 	}
 	#about .info .info_wr .txt_wr .sub_txt {
 		font-size: 0.875rem;
-		/* font-size: 1rem; */
 	}
 	#about .info .info_wr .txt_wr .sub_txt li:not(:last-child) {
 		margin-bottom: 8px;
@@ -708,7 +685,7 @@ footer .copy {
 	#about .skill h3.tit {
 		font-size: 1.875rem;
 	}
-	#about .skill h4.tit {
+	#about .skill .sub_tit {
 		font-size: 1rem;
 	}
 	#about .skill .wr {

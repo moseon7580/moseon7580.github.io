@@ -36,11 +36,11 @@ $(function () {
 
         if (st > lastScrollTop && st > navbarHeight){
             // 스크롤을 내렸을 때
-            $("header").slideUp("200"); // header 숨기기
+            $("header").slideUp("100"); // header 숨기기
         } else {
             // 스크롤을 올렸을 때
             if(st + $(window).height() < $(document).height()) {
-                $("header").slideDown("200"); // header 보이기
+                $("header").slideDown("100"); // header 보이기
             }
         }
 
