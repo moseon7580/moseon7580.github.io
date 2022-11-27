@@ -668,6 +668,28 @@ footer .copy {
 }
 
 @media (max-width: 576px) {
+	#main {
+		height: 100vh;
+	}
+	#main .layout .wr {
+		display: block;
+		padding: 0;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		top: 50%;
+		left: 50%;
+	}
+	#main .left {
+		margin-bottom: 56px;
+	}
+	#main .left img {
+		max-width: 180px;
+	}
+	#main .right {
+		text-align: center;
+	}
+	
+	
 	#work .work_wr {
 		display: block;
 	}
