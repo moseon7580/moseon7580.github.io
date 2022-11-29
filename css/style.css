@@ -75,7 +75,8 @@ a {
 }
 .date {
 	font-size: 0.813rem;
-	color: #a1a1a1;
+	color: #f3bd00;
+	/* color: #a1a1a1; */
 	display: block;
 	font-weight: 600;
 }
@@ -472,6 +473,9 @@ footer {
 footer .ft_logo {
 	margin-bottom: 14px;
 }
+footer .ft_logo a {
+	display: inline-block;
+}
 footer .ft_menu {
 	display: flex;
 	justify-content: center;
@@ -485,7 +489,7 @@ footer .ft_menu li a:hover {
 	font-weight: 900;
 }
 footer .copy {
-	color: #666;
+	color: #888;
 	font-size: 0.875rem;
 }
 
@@ -679,6 +683,9 @@ footer .copy {
 	}
 
 
+	footer .ft_logo a img {
+		max-width: 60px;
+	}
 	footer .ft_menu li a {
 		font-size: 0.875rem;
 	}
@@ -720,7 +727,11 @@ footer .copy {
 	#about .info .layout {
 		display: block;
 	}
+	#about .info .img_wr {
+		margin-bottom: 70px;
+	}
 	#about .info .img_wr img {
+		max-width: 280px;
 		display: block;
 		margin: 0 auto;
 	}
