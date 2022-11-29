@@ -669,11 +669,14 @@ footer .copy {
 
 @media (max-width: 576px) {
 	#main {
-		/* 모바일 상단 주소창 제외 뷰포트 세로값에 맞춤 */
-		min-height: 100vh;            /* fall-back */
-		min-height: -moz-available;
-		min-height: -webkit-fill-available;
-		min-height: fill-available;
+		min-height: 100vh;
+	}
+	/* iOS only */
+	@supports (-webkit-touch-callout: none) { 
+		#main {
+			/* 모바일 상단 주소창 제외 뷰포트 세로값에 맞춤 */
+			min-height: -webkit-fill-available;
+		}
 	}
 	#main .layout .wr {
 		display: block;
