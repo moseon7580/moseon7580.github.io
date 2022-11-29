@@ -78,7 +78,7 @@ a {
 	color: #f3bd00;
 	/* color: #a1a1a1; */
 	display: block;
-	font-weight: 600;
+	font-weight: 700;
 }
 
 
@@ -304,6 +304,29 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 }
 #about .info .info_wr .left {
 	margin-right: 80px;
+}
+#about .info .info_wr .left .txt_wr .sub_txt li a::after {
+	transition: .2s;
+	width: 0;
+	display: block;
+	content: "";
+	height: 7px;
+	background: #ffe900;
+	position: absolute;
+	bottom: 3px;
+	left: 0;
+	z-index: -1;
+}
+#about .info .info_wr .left .txt_wr .sub_txt li a:hover::after {
+	width: 100%;
+}
+#about .info .info_wr .left .txt_wr .sub_txt li .use_icon {
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+}
+#about .info .info_wr .left .txt_wr .sub_txt li .use_icon .icon {
+	margin-right: 6px;
 }
 #about .info .info_wr .txt_wr:not(:last-child) {
 	margin-bottom: 66px;
