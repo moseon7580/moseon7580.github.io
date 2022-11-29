@@ -669,7 +669,10 @@ footer .copy {
 
 @media (max-width: 576px) {
 	#main {
-		height: 100vh;
+		min-height: 100vh;            /* fall-back */
+		min-height: -moz-available;
+		min-height: -webkit-fill-available;
+		min-height: fill-available;
 	}
 	#main .layout .wr {
 		display: block;
@@ -687,6 +690,19 @@ footer .copy {
 	}
 	#main .right {
 		text-align: center;
+	}
+
+
+	#about .info .layout {
+		display: block;
+	}
+	#about .info .img_wr img {
+		display: block;
+		margin: 0 auto;
+	}
+	#about .info .info_wr {
+		text-align: center;
+		width: 100%;
 	}
 	
 	
