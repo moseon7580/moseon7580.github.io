@@ -71,6 +71,7 @@ a {
 	font-size: 1rem;
 	color: #666;
 	line-height: 1.6;
+	word-break: keep-all;
 }
 .date {
 	font-size: 0.813rem;
@@ -164,6 +165,13 @@ header .hd_m .nav_m {
 header .hd_m .nav_m.show_list {
 	opacity: 1;
 	visibility: visible;
+}
+header .hd_m .nav_m .layout {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	width: 100%;
 }
 header .hd_m .nav_m .gnb .gnb_item {
 	font-size: 2.5rem;
@@ -423,26 +431,34 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 #contact .layout {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+	flex-direction: row-reverse;
 }
-#contact .left .tit {
-	font-size: 3.75rem;
-	font-weight: 500;
+#contact .right .tit {
+	/* font-size: 3.75rem; */
+	margin-bottom: 22px;
+}
+#contact .right .sub_txt {
 	margin-bottom: 36px;
 }
-#contact .left .sub_txt {
-	line-height: 1.6;
-	margin-bottom: 26px;
-}
-#contact .left .btn_send {
-	display: inline-block;
-	padding: 10px;
+#contact .right .btn {
+	display: inline-flex;
+    align-items: center;
+	padding: 6px 10px;
 	border: 1px solid #333;
 	font-weight: 600;
 	transition: .2s;
+	font-size: 0.875rem;
 }
-#contact .left .btn_send:hover {
+#contact .right .btn:not(:last-child) {
+	margin-right: 4px;
+}
+#contact .right .btn:hover {
 	background-color: #333;
 	color: #ffe900;
+}
+#contact .right .btn span {
+	margin-left: 6px;
 }
 
 
@@ -567,13 +583,13 @@ footer .copy {
 
 
 
-	#contact .left {
+	#contact .right {
 		width: 60%;
 	}
-	#contact .right {
+	#contact .left {
 		width: 40%;
 	}
-	#contact .right img {
+	#contact .left img {
 		width: 100%;
 	}
 }
@@ -581,6 +597,9 @@ footer .copy {
 @media (max-width: 768px) {
 	.tit {
 		font-size: 1.875rem;
+	}
+	.sub_txt {
+		font-size: 0.875rem;
 	}
 
 	
@@ -630,9 +649,6 @@ footer .copy {
 		font-size: 1rem;
 		margin-bottom: 16px;
 	}
-	#about .info .info_wr .txt_wr .sub_txt {
-		font-size: 0.875rem;
-	}
 	#about .info .info_wr .txt_wr .sub_txt li:not(:last-child) {
 		margin-bottom: 8px;
 	}
@@ -661,8 +677,13 @@ footer .copy {
 	#about .skill .txt_wr:nth-child(even) {
 		margin-left: 0;
 	}
-	#about .skill .txt_wr .sub_txt {
+
+
+	footer .ft_menu li a {
 		font-size: 0.875rem;
+	}
+	footer .copy {
+		font-size: 0.75rem;
 	}
 }
 
