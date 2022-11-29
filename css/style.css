@@ -385,19 +385,24 @@ header .hd_m .btn_menu.on span:nth-child(3) {
     justify-content: space-between;
     /* font-size: 1.125rem; */
     font-weight: 400;
-	max-width: 400px;
+	max-width: 330px;
     width: 100%;
     margin: 0 auto;
 	transition: .2s;
 	margin-bottom: 75px;
 }
-#work .cate .cate_menu {
+#work .cate .cate_menu a {
 	color: #b4b4b4;
+	border: 1px solid #b4b4b4;
+	border-radius: 40px;
+	padding: 6px 12px;
 	transition: .2s;
+	display: block;
 }
-#work .cate .cate_menu.on {
-	color: #333;
-	font-weight: 600;
+#work .cate .cate_menu.on a {
+	color: #fff;
+	background-color: #666;
+	border-color: #666;
 }
 #work .work_wr {
 	display: flex;
@@ -769,6 +774,10 @@ footer .copy {
 	}
 	
 	
+	#work .cate .cate_menu a {
+		/* padding: 4px 10px; */
+		font-size: 0.875rem;
+	}
 	#work .work_wr {
 		display: block;
 	}
@@ -777,6 +786,24 @@ footer .copy {
 	}
 	#work .work_wr .work_item > a .txt_box .txt_box_wr {
 		top: 93%;
+	}
+
+
+	#contact .layout {
+		display: block;
+	}
+	#contact .left {
+		width: 100%;
+		margin-bottom: 50px;
+	}
+	#contact .left img {
+		display: block;
+		margin: 0 auto;
+		max-width: 220px;
+	}
+	#contact .right {
+		text-align: center;
+		width: 100%;
 	}
 }
 
