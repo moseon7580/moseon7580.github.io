@@ -400,8 +400,8 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 }
 #work .cate .cate_menu.on a {
 	color: #fff;
-	background-color: #666;
-	border-color: #666;
+	background-color: #555;
+	border-color: #555;
 }
 #work .work_wr {
 	display: flex;
@@ -415,6 +415,9 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 	width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+	font-size: 1.375rem;
+	/* padding: 0 16px;
+	box-sizing: border-box; */
 }
 #work .work_wr .work_item .work_item_wr {
 	display: block;
@@ -423,20 +426,30 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 }
 #work .work_wr .work_item .work_item_wr .thumbnail {
 	display: block;
+	width: 100%;
 }
 #work .work_wr .work_item .work_item_wr .txt_box {
 	position: absolute;
 	left: 0;
 	bottom: 0;
 	width: 100%;
+	box-sizing: border-box;
+	padding: 0 16px;
 }
 #work .work_wr .work_item .work_item_wr .hover_txt_box {
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, .6);
+	background-color: rgb(255 233 0 / 85%);
 	position: absolute;
     left: 0;
     top: 0;
+	opacity: 0;
+	transition: .4s;
+	visibility: hidden;
+}
+#work .work_wr .work_item:hover .work_item_wr .hover_txt_box {
+	visibility: visible;
+	opacity: 1;
 }
 #work .work_wr .work_item .work_item_wr .hover_txt_box .txt_box_wr {
 	position: absolute;
@@ -445,6 +458,10 @@ header .hd_m .btn_menu.on span:nth-child(3) {
     transform: translate(-50%, -50%);
 	color: #fff;
 	width: 100%;
+	text-align: center;
+	color: #333;
+	box-sizing: border-box;
+	padding: 0 16px;
 }
 
 

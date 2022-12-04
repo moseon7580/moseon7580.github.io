@@ -78,7 +78,7 @@ $(function () {
     });
 
 
-    // works 게시물 분류
+    // work 게시물 분류
     $("#work .cate .cate_menu a").click(function (e) {
         e.preventDefault();
         $("#work .cate .cate_menu").removeClass("on");
@@ -96,6 +96,43 @@ $(function () {
             $(".work_wr .work_item[class*="+cate+"]").show();
         }
     });
+
+
+    // work 게시물 분류, 제목 통일
+    // c.click(function (e) {
+    //     let work_type = $(this).attr("data-type");
+
+    //     $(this).addClass(work_type);
+    //     // console.log(work_type);
+    // });
+
+    
+    // if ($("#work .work_wr .work_item").length > 0) {
+    //     console.log($(this));
+    // };
+
+
+    // let work_items = $("#work .work_wr .work_item");
+
+    // for (var i = 0; i < work_items.length; i++) {
+    //     let work_type = $(this).attr("data-type");
+    //     $("#work .work_wr .work_item").addClass(work_type);
+    // }
+
+    
+    $("#work .work_wr .work_item").each(function (e) {
+        let work_type = $(this).attr("data-type");
+        
+        $(this).addClass(work_type);
+
+        console.log($(this));
+    });
+
+
+    // $("#work .work_wr .work_item").each(work_items, function (i, e) {
+    //     console.log('element', i, e);
+    //     console.log(work_items);
+    // });
 
 
     // ie로 접속시 경고창
