@@ -122,10 +122,11 @@ $(function () {
     
     $("#work .work_wr .work_item").each(function (e) {
         let work_type = $(this).attr("data-type");
+        let work_tit = $(this).find(".txt_box").find(".tit").text();
         
-        $(this).addClass(work_type);
+        $(this).addClass(work_type).find(".work_type").text(work_type).next(".tit").text(work_tit);
 
-        console.log($(this));
+        console.log(work_tit);
     });
 
 
