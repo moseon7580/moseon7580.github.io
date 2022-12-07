@@ -45,9 +45,6 @@ html, body {
 
 
 /* 공통 CSS */
-/* html, body {
-	scroll-behavior: smooth;
-} */
 a {
 	color: inherit;
 	text-decoration: none;

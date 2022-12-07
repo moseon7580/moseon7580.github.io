@@ -3,7 +3,7 @@ $(function () {
     $("#btn_top").click(function() {
         $('html, body').animate({
             scrollTop : 0
-        }, 400);
+        }, 500);
         
         return false;
     });
@@ -75,6 +75,16 @@ $(function () {
         $(this).toggleClass("on");
         $("html, body").toggleClass("scroll_disable");
         $(".nav_m").toggleClass("show_list");
+    });
+
+
+    // main 스크롤 버튼 누를 시 about 영역으로 부드럽게 스크롤
+    $(".scroll_down").click(function(e) {         
+        e.preventDefault();
+
+        $("html, body").animate({
+            scrollTop:$(this.hash).offset().top
+        }, 500);
     });
 
 
