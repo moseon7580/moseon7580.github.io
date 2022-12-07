@@ -45,6 +45,9 @@ html, body {
 
 
 /* 공통 CSS */
+/* html, body {
+	scroll-behavior: smooth;
+} */
 a {
 	color: inherit;
 	text-decoration: none;
@@ -384,19 +387,20 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 	display: flex;
     justify-content: space-between;
     font-weight: 400;
-	max-width: 330px;
+	max-width: 300px;
     width: 100%;
     margin: 0 auto;
 	transition: .2s;
-	margin-bottom: 75px;
+	margin-bottom: 60px;
 }
 #work .cate .cate_menu a {
 	color: #b4b4b4;
 	border: 1px solid #b4b4b4;
 	border-radius: 40px;
-	padding: 6px 12px;
+	padding: 4px 10px;
 	transition: .2s;
 	display: block;
+	font-size: 0.875rem;
 }
 #work .cate .cate_menu.on a {
 	color: #fff;
@@ -434,7 +438,11 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 	bottom: 0;
 	width: 100%;
 	box-sizing: border-box;
-	padding: 0 16px;
+	padding: 0 16px 12px 16px;
+	opacity: 1;
+	visibility: visible;
+	transition: .4s;
+	color: #fff;
 }
 #work .work_wr .work_item .work_item_wr .hover_txt_box {
 	width: 100%;
@@ -446,6 +454,25 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 	opacity: 0;
 	transition: .4s;
 	visibility: hidden;
+}
+#work .work_wr .work_item:hover .work_item_wr .txt_box {
+	opacity: 0;
+	visibility: hidden;
+}
+/* #work .work_wr .work_item .work_item_wr .work_type {
+    background-color: #555555;
+    padding: 4px 10px;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 20px;
+    display: inline-block;
+} */
+#work .work_wr .work_item .work_item_wr .work_type {
+	text-transform: uppercase;
+	font-size: 0.875rem;
+	display: inline-block;
+	margin-bottom: 2px;
 }
 #work .work_wr .work_item:hover .work_item_wr .hover_txt_box {
 	visibility: visible;
@@ -653,10 +680,6 @@ footer .copy {
 		display: flex;
 	}
 
-
-	#about .intro .sub_txt {
-		font-size: 1rem;
-	}
 	
 	#main .right .main_txt {
 		font-size: 3.375rem;
@@ -668,6 +691,10 @@ footer .copy {
 		width: 65%;
 	}
 	
+
+	#about .intro .sub_txt {
+		font-size: 1rem;
+	}
 
 	#about .info .layout {
 		justify-content: space-around;
@@ -713,6 +740,14 @@ footer .copy {
 	}
 	#about .skill .txt_wr:nth-child(even) {
 		margin-left: 0;
+	}
+
+
+	#work .work_wr .work_item .tit {
+		font-size: 1.125rem;
+	}
+	#work .work_wr .work_item .work_item_wr .work_type {
+		font-size: 0.75rem;
 	}
 
 
@@ -774,11 +809,17 @@ footer .copy {
 	}
 	
 	
+	#work .cate {
+		margin-bottom: 46px;
+	}
 	#work .cate .cate_menu a {
 		font-size: 0.875rem;
 	}
 	#work .work_wr {
 		display: block;
+	}
+	#work .work_wr .work_item {
+		width: 100%;
 	}
 
 
