@@ -98,12 +98,12 @@ $(function () {
     });
 
 
-    // work 게시물 분류, 제목 통일
-    $("#work .work_wr .work_item").each(function (e) {
+    // work 게시물 분류, 제목 통일, 썸네일 alt 속성 통일
+    $("#work .work_wr .work_item").each(function () {
         let work_type = $(this).attr("data-type");
         let work_tit = $(this).find(".txt_box").find(".tit").text();
         
-        $(this).addClass(work_type).find(".work_type").text(work_type).next(".tit").text(work_tit);
+        $(this).addClass(work_type).find(".work_type").text(work_type).next(".tit").text(work_tit).end().end().find(".thumbnail").attr("alt", work_tit);
     });
 
 
