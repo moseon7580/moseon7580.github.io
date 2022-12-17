@@ -61,7 +61,7 @@ $(function () {
             
             $("header .hd_m .btn_menu").removeClass("on");
             $("header .hd_m .nav_m").removeClass("show_list");
-            // console.log("close menu");
+            $("html, body").removeClass("scroll_disable");
         } else {
             $("html, body").animate({
                 // window location.hash 속성

@@ -295,7 +295,7 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 #about .intro .wr {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	/* align-items: center; */
 }
 #about .intro .tit {
 	color: #b4b4b4;
@@ -305,7 +305,7 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 }
 #about .intro .sub_txt {
     font-size: 1.125rem;
-    max-width: 614px;
+    max-width: 630px;
     width: 100%;
 	line-height: 1.6;
 	word-break: keep-all;
