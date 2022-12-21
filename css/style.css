@@ -800,13 +800,19 @@ footer .copy {
 			min-height: -webkit-fill-available;
 		}
 	}
+	#main .layout {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
 	#main .layout .wr {
 		display: block;
 		padding: 0;
-		position: absolute;
+		/* position: absolute;
 		transform: translate(-50%, -50%);
 		top: 48%;
-		left: 50%;
+		left: 50%; */
 	}
 	#main .left {
 		margin-bottom: 50px;
