@@ -76,9 +76,24 @@ a {
 .date {
 	font-size: 0.813rem;
 	color: #f3bd00;
-	/* color: #a1a1a1; */
 	display: block;
 	font-weight: 700;
+}
+
+
+
+/* 스크롤 위치에 반응하는 애니메이션 */
+.hidden {
+	opacity: 0;
+}
+
+.fade-in {
+	animation: fade-in 1.4s;
+}
+
+@keyframes fade-in {
+	from {opacity: 0; transform: scale(.7,.7)}
+	to {opacity: 1;}
 }
 
 
