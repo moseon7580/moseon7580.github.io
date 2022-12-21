@@ -83,7 +83,7 @@ a {
 
 
 /* 스크롤 위치에 반응하는 애니메이션 */
-.hidden {
+/* .hidden {
 	opacity: 0;
 }
 .fade-in {
@@ -99,6 +99,35 @@ a {
 }
 @keyframes fade-in-center {
 	from {opacity: 0; transform: scale(.7,.7), translate(-50%, -50%)}
+	to {opacity: 1;}
+} */
+
+.zoom-in, .fade-up, .fade-right {
+	opacity: 0;
+}
+.end-zoom-in {
+	animation: zoom-in 1.4s;
+}
+.end-fade-up {
+	animation: fade-up 1.4s;
+}
+.end-fade-right {
+	animation: fade-right 1.4s;
+}
+@keyframes zoom-in {
+	from {opacity: 0; transform: scale(.7,.7)}
+	to {opacity: 1;}
+}
+@keyframes center-zoom-in {
+	from {opacity: 0; transform: scale(.7,.7) translate(-50%, -50%)}
+	to {opacity: 1;}
+}
+@keyframes fade-up {
+	from {opacity: 0; transform: translate3d(0, 100px, 0)}
+	to {opacity: 1;}
+}
+@keyframes fade-right {
+	from {opacity: 0; transform: translate3d(-100px, 0, 0)}
 	to {opacity: 1;}
 }
 
@@ -812,6 +841,9 @@ footer .copy {
 		align-items: center;
 		height: 100vh;
 	} */
+	#main .end-zoom-in {
+		animation: center-zoom-in 1.4s;
+	}
 	#main .layout .wr {
 		display: block;
 		padding: 0;

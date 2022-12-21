@@ -1,7 +1,7 @@
 $(function () {
     // top 버튼
     $("#btn_top").click(function() {
-        $('html, body').animate({
+        $("html, body").animate({
             scrollTop : 0
         }, 500);
         
@@ -13,13 +13,15 @@ $(function () {
     // var 함수명 = function(){}: 변수 함수 선언 (함수가 들어있지만 함수는 아니고 변수임.)
     var animateHTML = function() {
         var elems,
-            windowHeight;
+            windowHeight,
+            animateDelay;
         
         // init = initialize(초기화). 보통 초기화의 의미를 지닌 함수와 객체를 작성할 때 사용하는 이름.
         var init = function() {
-          elems = document.getElementsByClassName("hidden");
-          windowHeight = window.innerHeight;
-          _addEventHandlers();
+            elems = document.getElementsByClassName("animate");
+            console.log(animateDelay);
+            windowHeight = window.innerHeight;
+            _addEventHandlers();
         }
         
         var _addEventHandlers = function() {
@@ -31,7 +33,15 @@ $(function () {
           for ( var i = 0; i < elems.length; i++ ) {
             var posFromTop = elems[i].getBoundingClientRect().top;
             if ( posFromTop - windowHeight <= 0) { 
-              elems[i].className = elems[i].className.replace( "hidden", "fade-in" );
+                elems[i].className = elems[i].className.replace("animate zoom-in", "end-zoom-in");
+                elems[i].className = elems[i].className.replace("animate fade-up", "end-fade-up");
+                elems[i].className = elems[i].className.replace("animate fade-right", "end-fade-right");
+
+                // 애니메이션 딜레이 추가
+                animateDelay = elems[i].dataset.delay;
+                // elems[i].style.animationDelay = animateDelay + "s";
+                elems[i].style.transitionDelay = animateDelay + "s";
+                console.log(animateDelay);
             }
           }    
         }
@@ -40,7 +50,7 @@ $(function () {
           init: init
         }
     }
-      
+
     animateHTML().init();
 
 
