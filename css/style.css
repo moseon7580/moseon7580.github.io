@@ -86,13 +86,19 @@ a {
 .hidden {
 	opacity: 0;
 }
-
 .fade-in {
 	animation: fade-in 1.4s;
+}
+#main .fade-in {
+	animation: fade-in-center 1.4s;
 }
 
 @keyframes fade-in {
 	from {opacity: 0; transform: scale(.7,.7)}
+	to {opacity: 1;}
+}
+@keyframes fade-in-center {
+	from {opacity: 0; transform: scale(.7,.7), translate(-50%, -50%)}
 	to {opacity: 1;}
 }
 
@@ -800,19 +806,19 @@ footer .copy {
 			min-height: -webkit-fill-available;
 		}
 	}
-	#main .layout {
+	/* #main .layout {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: 100vh;
-	}
+	} */
 	#main .layout .wr {
 		display: block;
 		padding: 0;
-		/* position: absolute;
+		position: absolute;
 		transform: translate(-50%, -50%);
 		top: 48%;
-		left: 50%; */
+		left: 50%;
 	}
 	#main .left {
 		margin-bottom: 50px;
