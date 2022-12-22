@@ -38,10 +38,10 @@ $(function () {
                 elems[i].className = elems[i].className.replace("animate fade-right", "end-fade-right");
 
                 // 애니메이션 딜레이 추가
-                animateDelay = elems[i].dataset.delay;
+                // animateDelay = elems[i].dataset.delay;
                 // elems[i].style.animationDelay = animateDelay + "s";
-                elems[i].style.transitionDelay = animateDelay + "s";
-                console.log(animateDelay);
+                // elems[i].style.transitionDelay = animateDelay + "s";
+                // console.log(animateDelay);
             }
           }    
         }
