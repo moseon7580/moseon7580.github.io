@@ -83,26 +83,7 @@ a {
 
 
 /* 스크롤 위치에 반응하는 애니메이션 */
-/* .hidden {
-	opacity: 0;
-}
-.fade-in {
-	animation: fade-in 1.4s;
-}
-#main .fade-in {
-	animation: fade-in-center 1.4s;
-}
-
-@keyframes fade-in {
-	from {opacity: 0; transform: scale(.7,.7)}
-	to {opacity: 1;}
-}
-@keyframes fade-in-center {
-	from {opacity: 0; transform: scale(.7,.7), translate(-50%, -50%)}
-	to {opacity: 1;}
-} */
-
-.zoom-in, .fade-up, .fade-right {
+.zoom-in, .fade-up, .fade-right, .fade-in {
 	opacity: 0;
 }
 .end-zoom-in {
@@ -113,6 +94,9 @@ a {
 }
 .end-fade-right {
 	animation: fade-right 1.4s;
+}
+.end-fade-in {
+	animation: fade-in 1.6s;
 }
 @keyframes zoom-in {
 	from {opacity: 0; transform: scale(.7,.7)}
@@ -128,6 +112,10 @@ a {
 }
 @keyframes fade-right {
 	from {opacity: 0; transform: translate3d(-100px, 0, 0)}
+	to {opacity: 1;}
+}
+@keyframes fade-in {
+	from {opacity: 0;}
 	to {opacity: 1;}
 }
 
@@ -430,6 +418,9 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 
 #about .license {
 	padding: 140px 0;
+}
+#about .license .tit {
+	margin-bottom: 40px;
 }
 #about .license .tit strong {
 	background-color: #ffe900;

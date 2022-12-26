@@ -36,6 +36,7 @@ $(function () {
                 elems[i].className = elems[i].className.replace("animate zoom-in", "end-zoom-in");
                 elems[i].className = elems[i].className.replace("animate fade-up", "end-fade-up");
                 elems[i].className = elems[i].className.replace("animate fade-right", "end-fade-right");
+                elems[i].className = elems[i].className.replace("animate fade-in", "end-fade-in");
 
                 // 애니메이션 딜레이 추가
                 // animateDelay = elems[i].dataset.delay;
