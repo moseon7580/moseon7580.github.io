@@ -9,94 +9,86 @@
     <meta property="description" content="웹디자이너 김미선의 포트폴리오입니다.">
     <meta property="keywords" content="HTML, CSS, JavaScript, Web, Portfolio">
     <meta property="author" content="Kim Miseon">
-    <meta property="og:site_name" content="MS Portfolio">
-    <meta property="og:title" content="MS Portfolio">
+    <meta property="og:site_name" content="MS WEB Portfolio">
+    <meta property="og:title" content="MS WEB Portfolio">
     <meta property="og:description" content="웹디자이너 김미선의 포트폴리오입니다.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://moseon7580.github.io/">
     <!-- 썸네일 권장크기 1200*630 -->
-    <meta property="og:image" content="https://raw.githubusercontent.com/moseon7580/moseon7580.github.io/main/img/thumbnail.png">
+    <meta property="og:image" content="../img/thumbnail.png">
 
-    <title>MS Portfolio</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/script.js"></script>
+    <title>MS WEB Portfolio | 프로젝트명</title>
+    <link rel="shortcut icon" href="../img/favicon.png">
+    <link rel="icon" href="../img/favicon.png">
+    <link rel="apple-touch-icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/work_view.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
 </head>
 <body>
     <header>
-        <div class="layout">
-            <div class="hd_pc">
-                <div class="hd_logo">
-                    <a href="#">
-                        <img src="img/hd_logo.png" alt="홈페이지 로고">
-                    </a>
-                </div> <!-- .hd_logo -->
-                
-                <div class="nav">
-                    <ul class="gnb">
-                        <li class="gnb_item"><a href="#about">About</a></li>
-                        <li class="gnb_item"><a href="#work">Work</a></li>
-                        <li class="gnb_item"><a href="#contact">Contact</a></li>
-                    </ul> <!-- .gnb -->
-                </div> <!-- .nav -->
-            </div> <!-- .hd_pc -->
+        <!-- <div class="layout"> -->
+            <!-- <div class="hd_logo">
+                <a href="#">
+                    <img src="../img/hd_logo.png" alt="홈페이지 로고">
+                </a>
+            </div> -->
 
-            <div class="hd_m">
-                <div class="hd_logo">
-                    <a href="#">
-                        <img src="img/hd_logo.png" alt="홈페이지 로고">
-                    </a>
-                </div> <!-- .hd_logo -->
-                
-                <div class="nav_m">
-                    <div class="layout">
-                        <ul class="gnb">
-                            <li class="gnb_item gnb_item_m"><a href="#about">About</a></li>
-                            <li class="gnb_item gnb_item_m"><a href="#work">Work</a></li>
-                            <li class="gnb_item gnb_item_m"><a href="#contact">Contact</a></li>
-                        </ul> <!-- .gnb -->
-
-                        <div class="btn_wr"><a href="mailto:rlaaltjs7580@naver.com" class="btn_send">이메일 문의</a></div>
-                    </div>
-                </div> <!-- .nav_m -->
-
-                <div class="btn_menu">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    
-                    <!-- <span class="blind">헤더 메뉴 버튼</span> -->
-                </div>
-            </div> <!-- .hd_m -->
-        </div> <!-- .layout -->
+            <!-- 클릭 시 이전 페이지(홈 - #work 부분)으로 가야함. -->
+            <!-- <a href="#" onclick="history.back();"> -->
+            <a class="btn_close" href="../index.html#work">
+                <span class="material-symbols-outlined"> close </span>
+            </a>
+        <!-- </div> -->
     </header>
 
+
+    <main class="work_view">
+        <div class="visual_area">
+            <div class="visual_box">
+                <div class="layout">
+                    <div class="txt_box">
+                        <span class="work_type animate end-fade-in">web</span>
+                        <h2 class="tit animate end-fade-in">Lorem ipsum</h2>
+                        <h3 class="sub_tit animate end-fade-in">Duis euismod mollis ligula sed auctor.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="site_info">
+            <div class="layout">
+                <div class="visual_img_wr animate fade-up">
+                    <img src="../img/work/visual_img.png" alt="Lorem ipsum">
+                </div>
     
+                <p class="sub_txt">
+                    Praesent nunc nunc, lacinia ac imperdiet in, luctus eget nisl. Praesent tristique odio eget aliquam bibendum. Praesent mattis tortor non nulla fringilla, et convallis neque vestibulum. Nulla rhoncus, augue at fringilla dignissim, lectus felis venenatis enim, at dignissim libero mi vel urna.
+                </p>
+            </div>
+        </div>
+    </main>
+
 
     <footer>
         <div class="layout">
             <div class="ft_logo">
                 <a href="#">
-                    <img src="img/ft_logo.png" alt="홈페이지 하단 로고">
+                    <img src="../img/ft_logo.png" alt="홈페이지 하단 로고">
                 </a>
             </div> <!-- .ft_logo -->
     
-            <ul class="ft_menu gnb">
+            <!-- <ul class="ft_menu gnb">
                 <li class="gnb_item"><a href="#about">About</a></li>
                 <li class="gnb_item"><a href="#work">Work</a></li>
                 <li class="gnb_item"><a href="#contact">Contact</a></li>
-            </ul> <!-- .ft_menu -->
+            </ul> .ft_menu -->
     
             <p class="copy">
-                Copyright 2022. Kim Mi seon All rights reserved.
+                Copyright 2022. Kim Miseon All rights reserved.
             </p>
         </div> <!-- .layout -->
     </footer>
-
-    <button id="btn_top">
-        <span class="material-symbols-outlined"> arrow_drop_up </span>
-        <span class="blind">페이지 최상단으로</span>
-    </button>
 </body>
-</html>

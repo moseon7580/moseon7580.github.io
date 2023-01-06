@@ -419,6 +419,11 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 #about .license {
 	padding: 140px 0;
 }
+#about .license .layout {
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 #about .license .tit {
 	margin-bottom: 40px;
 }

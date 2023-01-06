@@ -35,6 +35,7 @@ $(function () {
             if ( posFromTop - windowHeight <= 0) { 
                 elems[i].className = elems[i].className.replace("animate zoom-in", "end-zoom-in");
                 elems[i].className = elems[i].className.replace("animate fade-up", "end-fade-up");
+                elems[i].className = elems[i].className.replace("animate semi-fade-up", "end-semi-fade-up");
                 elems[i].className = elems[i].className.replace("animate fade-right", "end-fade-right");
                 elems[i].className = elems[i].className.replace("animate fade-in", "end-fade-in");
 
@@ -59,7 +60,7 @@ $(function () {
     var didScroll;
     var lastScrollTop = 0;
     var delta = 5; // 이벤트를 발생시킬 스크롤의 이동 범위
-    var navbarHeight = $("header").outerHeight();
+    var navbarHeight = $("header.scroll_on").outerHeight();
 
     $(window).scroll(function(event){
         didScroll = true;
@@ -82,19 +83,19 @@ $(function () {
 
         if (st > lastScrollTop && st > navbarHeight){
             // 스크롤을 내렸을 때
-            $("header").slideUp("100"); // header 숨기기
+            $("header.scroll_on").slideUp("100"); // header 숨기기
         } else {
             // 스크롤을 올렸을 때
             if(st + $(window).height() < $(document).height()) {
-                $("header").slideDown("100"); // header 보이기
+                $("header.scroll_on").slideDown("100"); // header 보이기
             }
         }
 
         lastScrollTop = st; // 현재 멈춘 위치를 기준점으로 재설정
     }
-
-
-    // 헤더 메뉴, 푸터 메뉴 클릭 시 해당 요소로 스크롤
+                
+                
+    // // 헤더 메뉴, 푸터 메뉴 클릭 시 해당 요소로 스크롤
     $(".gnb .gnb_item a").click(function (e) {
         e.preventDefault();
         
