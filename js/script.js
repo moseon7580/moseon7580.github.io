@@ -19,7 +19,7 @@ $(function () {
         // init = initialize(초기화). 보통 초기화의 의미를 지닌 함수와 객체를 작성할 때 사용하는 이름.
         var init = function() {
             elems = document.getElementsByClassName("animate");
-            console.log(animateDelay);
+            // console.log(animateDelay);
             windowHeight = window.innerHeight;
             _addEventHandlers();
         }
@@ -30,9 +30,9 @@ $(function () {
         }
 
         var _checkPosition = function() {
-          for ( var i = 0; i < elems.length; i++ ) {
+          for (var i = 0; i < elems.length; i++) {
             var posFromTop = elems[i].getBoundingClientRect().top;
-            if ( posFromTop - windowHeight <= 0) { 
+            if (posFromTop - windowHeight <= 0) { 
                 elems[i].className = elems[i].className.replace("animate zoom-in", "end-zoom-in");
                 elems[i].className = elems[i].className.replace("animate fade-up", "end-fade-up");
                 elems[i].className = elems[i].className.replace("animate semi-fade-up", "end-semi-fade-up");
