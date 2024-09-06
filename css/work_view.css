@@ -46,10 +46,10 @@ h3.tit {
     transform: translateY(-34%);
     text-align: center;
     width: 100%;
-    color: #fff;
+    color: #333;
 }
 .work_view .visual_area .visual_box .txt_box .work_type {
-    border: 1px solid #fff;
+    border: 1px solid #333;
     padding: 4px 14px;
     border-radius: 29px;
     margin-bottom: 8px;
