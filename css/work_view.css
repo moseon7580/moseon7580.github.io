@@ -34,7 +34,8 @@ h3.tit {
     position: relative;
     
     /* parallax scrolling */
-    background-image: url("http://podu.co.kr/theme/podu/img/pages/info/intro/intro_bg.png");    background-attachment: fixed;
+    background-image: url("../img/work/visual_box_img.png");
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,10 +47,10 @@ h3.tit {
     transform: translateY(-34%);
     text-align: center;
     width: 100%;
-    color: #333;
+    color: #fff;
 }
 .work_view .visual_area .visual_box .txt_box .work_type {
-    border: 1px solid #333;
+    border: 1px solid #fff;
     padding: 4px 14px;
     border-radius: 29px;
     margin-bottom: 8px;
