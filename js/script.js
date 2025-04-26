@@ -164,10 +164,41 @@ $(function () {
     });
 
 
-    // ie로 접속시 경고창
-    var agent = navigator.userAgent.toLowerCase();
-
-    if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) {
-        alert('Internet Explorer는 호환되지 않는 브라우저 입니다. \n다른 브라우저를 이용해주세요.')
-    }
+    function displayProjects() {
+        const portfolioList = document.querySelector('.work_wr');
+      
+        fetch('js/work_data.json')  // json 파일 경로!
+          .then(response => response.json())
+          .then(projects => {
+            projects.forEach(project => {
+              const workItem = document.createElement('div');
+              workItem.classList.add('work_item');
+              workItem.setAttribute('data-type', project.type);
+      
+              workItem.innerHTML = `
+                <a href="${project.link}" class="work_item_wr">
+                  <img src="${project.image}" class="thumbnail" alt="${project.title}">
+                  <div class="txt_box">
+                    <span class="work_type">${project.type}</span>
+                    <h4 class="tit">${project.title}</h4>
+                  </div>
+                  <div class="hover_txt_box">
+                    <div class="txt_box_wr">
+                      <span class="work_type">${project.type}</span>
+                      <h4 class="tit">${project.title}</h4>
+                    </div>
+                  </div>
+                </a>
+              `;
+      
+              portfolioList.appendChild(workItem);
+            });
+          })
+          .catch(error => {
+            console.error('데이터를 불러오는 중 에러 발생:', error);
+          });
+      }
+      
+      // 페이지 로드되면 함수 실행
+      displayProjects();
 }); // document.onready
