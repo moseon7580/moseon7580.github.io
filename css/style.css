@@ -418,6 +418,7 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 
 #about .license {
 	padding: 140px 0;
+	text-align: center;
 }
 #about .license .layout {
 	display: flex;
@@ -446,7 +447,7 @@ header .hd_m .btn_menu.on span:nth-child(3) {
     margin-bottom: 20px;
 	text-align: center;
 }
-#work .cate {
+/* #work .cate {
 	display: flex;
     justify-content: space-between;
     font-weight: 400;
@@ -469,6 +470,37 @@ header .hd_m .btn_menu.on span:nth-child(3) {
 	color: #fff;
 	background-color: #555;
 	border-color: #555;
+} */
+#work .cate {
+    display: flex;
+    justify-content: center;  /* 탭을 왼쪽 정렬 */
+    font-weight: 400;
+    max-width: 100%;  /* 스크롤이 가능하도록 100% */
+    width: 100%;
+    margin: 0 auto;
+    transition: .2s;
+    margin-bottom: 60px;
+    overflow-x: auto;  /* 가로 스크롤 가능하게 */
+    -webkit-overflow-scrolling: touch;  /* 모바일에서 부드러운 스크롤 */
+    padding-bottom: 10px;  /* 탭 아래에 여백을 추가 */
+}
+
+#work .cate .cate_menu a {
+    color: #b4b4b4;
+    border: 1px solid #b4b4b4;
+    border-radius: 40px;
+    padding: 4px 10px;
+    transition: .2s;
+    display: block;
+    font-size: 0.875rem;
+    white-space: nowrap;  /* 텍스트가 줄 바꿈되지 않도록 */
+    margin-right: 10px;  /* 탭 간 간격 추가 */
+}
+
+#work .cate .cate_menu.on a {
+    color: #fff;
+    background-color: #555;
+    border-color: #555;
 }
 #work .work_wr {
 	display: flex;
@@ -882,9 +914,12 @@ footer .copy {
 		width: 100%;
 	}
 	
-	
+	#work h3.tit {
+		text-align: left;
+	}
 	#work .cate {
 		margin-bottom: 46px;
+		justify-content: flex-start;
 	}
 	#work .cate .cate_menu a {
 		font-size: 0.875rem;

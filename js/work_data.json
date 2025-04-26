@@ -1,0 +1,20 @@
+[
+    {
+      "title": "텍스트1",
+      "type": "web",
+      "image": "img/work_item_001.png",
+      "link": "work/work_view_exam.html"
+    },
+    {
+      "title": "텍스트2",
+      "type": "graphic",
+      "image": "img/work_item_002.png",
+      "link": "work/work_view_exam.html"
+    },
+    {
+      "title": "이미지 드래그 & 저장 기능 구현 (fabric.js)",
+      "type": "dev",
+      "image": "img/dev/dev_001/dev_thumb_001.png",
+      "link": "work/dev/dev_001.html"
+    }
+  ]

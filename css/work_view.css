@@ -15,6 +15,11 @@ header .btn_close {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .3s;
+}
+header .btn_close:hover {
+    box-shadow: 0px 6px 10px 0px rgb(0 0 0 / 15%);
+    transform: scale(1.05);
 }
 header .btn_close span {
     font-size: 36px;
@@ -90,7 +95,7 @@ h3.tit {
     margin-top: -380px;
 }
 .work_view .site_info .visual_img_wr {
-    margin-bottom: 100px;
+    margin-bottom: 150px;
 }
 .work_view .site_info .visual_img_wr img {
     display: block;
