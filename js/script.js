@@ -135,39 +135,13 @@ $(function () {
     });
 
 
-    // work 게시물 분류
-    $("#work .cate .cate_menu a").click(function (e) {
-        e.preventDefault();
-        $("#work .cate .cate_menu").removeClass("on");
-        $(this).parent().addClass("on");
-
-        // 변수 중복 선언을 막기위해 let 사용 (재할당은 가능.)
-        let cate = $(this).attr("title");
-        $(".work_wr .work_item").hide();
-
-        if (cate == "all") {
-            $(".work_wr .work_item").show();
-        } else {
-            // 속성 선택자 사용
-            // [속성이름*="속성값"] 선택자는 특정 속성의 속성값에 특정 문자열를 포함하는 요소를 모두 선택.
-            $(".work_wr .work_item[class*="+cate+"]").show();
-        }
-    });
-
-
-    // work 게시물 분류, 제목 통일, 썸네일 alt 속성 통일
-    $("#work .work_wr .work_item").each(function () {
-        let work_type = $(this).attr("data-type");
-        let work_tit = $(this).find(".txt_box").find(".tit").text();
-        
-        $(this).addClass(work_type).find(".work_type").text(work_type).next(".tit").text(work_tit).end().end().find(".thumbnail").attr("alt", work_tit);
-    });
+    
 
 
     function displayProjects() {
         const portfolioList = document.querySelector('.work_wr');
       
-        fetch('js/work_data.json')  // json 파일 경로!
+        fetch('js/work_data.json')
           .then(response => response.json())
           .then(projects => {
             projects.forEach(project => {
@@ -193,12 +167,60 @@ $(function () {
       
               portfolioList.appendChild(workItem);
             });
+    
+            // ★★★ work_item 생성 끝난 후에 이걸 해야 함! ★★★
+            $("#work .cate .cate_menu a").click(function (e) {
+                e.preventDefault();
+                $("#work .cate .cate_menu").removeClass("on");
+                $(this).parent().addClass("on");
+            
+                let cate = $(this).attr("title");
+                $(".work_wr .work_item").hide();
+            
+                if (cate == "all") {
+                    $(".work_wr .work_item").show();
+                } else {
+                    $(".work_wr .work_item[data-type=" + cate + "]").show();
+                }
+            });
+            
+    
           })
           .catch(error => {
             console.error('데이터를 불러오는 중 에러 발생:', error);
           });
-      }
+    }
+    
       
       // 페이지 로드되면 함수 실행
       displayProjects();
+
+
+      // work 게시물 분류
+    // $("#work .cate .cate_menu a").click(function (e) {
+    //     e.preventDefault();
+    //     $("#work .cate .cate_menu").removeClass("on");
+    //     $(this).parent().addClass("on");
+
+    //     // 변수 중복 선언을 막기위해 let 사용 (재할당은 가능.)
+    //     let cate = $(this).attr("title");
+    //     $(".work_wr .work_item").hide();
+
+    //     if (cate == "all") {
+    //         $(".work_wr .work_item").show();
+    //     } else {
+    //         // 속성 선택자 사용
+    //         // [속성이름*="속성값"] 선택자는 특정 속성의 속성값에 특정 문자열를 포함하는 요소를 모두 선택.
+    //         $(".work_wr .work_item[class*="+cate+"]").show();
+    //     }
+    // });
+
+
+    // work 게시물 분류, 제목 통일, 썸네일 alt 속성 통일
+    // $("#work .work_wr .work_item").each(function () {
+    //     let work_type = $(this).attr("data-type");
+    //     let work_tit = $(this).find(".txt_box").find(".tit").text();
+        
+    //     $(this).addClass(work_type).find(".work_type").text(work_type).next(".tit").text(work_tit).end().end().find(".thumbnail").attr("alt", work_tit);
+    // });
 }); // document.onready
