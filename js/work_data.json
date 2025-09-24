@@ -1,7 +1,7 @@
 [
     {
       "title": "텍스트1",
-      "type": ["web", "graphic"],
+      "type": "web",
       "image": "img/work_item_001.png",
       "link": "work/work_view_exam.html"
     },
