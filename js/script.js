@@ -30,19 +30,22 @@ $(function () {
         }
 
         var _checkPosition = function() {
-            // 스크롤 이벤트가 발생할 때마다 'animate' 클래스를 가진 요소를 다시 가져옵니다.
-            var elements = document.getElementsByClassName("animate");
+          for (var i = 0; i < elems.length; i++) {
+            var posFromTop = elems[i].getBoundingClientRect().top;
+            if (posFromTop - windowHeight <= 0) { 
+                elems[i].className = elems[i].className.replace("animate zoom-in", "end-zoom-in");
+                elems[i].className = elems[i].className.replace("animate fade-up", "end-fade-up");
+                elems[i].className = elems[i].className.replace("animate semi-fade-up", "end-semi-fade-up");
+                elems[i].className = elems[i].className.replace("animate fade-right", "end-fade-right");
+                elems[i].className = elems[i].className.replace("animate fade-in", "end-fade-in");
 
-            for (var i = 0; i < elements.length; i++) {
-                var posFromTop = elements[i].getBoundingClientRect().top;
-                if (posFromTop - windowHeight <= 0) {
-                elements[i].className = elements[i].className.replace("animate zoom-in", "end-zoom-in");
-                elements[i].className = elements[i].className.replace("animate fade-up", "end-fade-up");
-                elements[i].className = elements[i].className.replace("animate semi-fade-up", "end-semi-fade-up");
-                elements[i].className = elements[i].className.replace("animate fade-right", "end-fade-right");
-                elements[i].className = elements[i].className.replace("animate fade-in", "end-fade-in");
-                }
+                // 애니메이션 딜레이 추가
+                // animateDelay = elems[i].dataset.delay;
+                // elems[i].style.animationDelay = animateDelay + "s";
+                // elems[i].style.transitionDelay = animateDelay + "s";
+                // console.log(animateDelay);
             }
+          }    
         }
         
         return {
