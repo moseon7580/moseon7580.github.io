@@ -192,114 +192,43 @@ $(function () {
     // }
 
 
-    // function displayProjects() {
-    //     const portfolioList = document.querySelector('.work_wr');
-
-    //     fetch('js/work_data.json')
-    //         .then(response => response.json())
-    //         .then(projects => {
-    //         projects.forEach(project => {
-    //             const workItem = document.createElement('div');
-    //             workItem.classList.add('work_item');
-                
-    //             // --- 1. 여기를 수정: project.type 배열을 공백으로 구분된 문자열로 만듭니다.
-    //             // 예를 들어 ["web", "uiux"]는 "web uiux"가 됩니다.
-    //             workItem.setAttribute('data-type', project.type.join(' ')); 
-
-    //             // work_type 스팬에도 모든 태그를 표시하도록 수정합니다.
-    //             const typesHtml = project.type.map(type => `<span class="work_type">${type}</span>`).join('');
-
-    //             workItem.innerHTML = `
-    //             <a href="${project.link}" class="work_item_wr">
-    //                 <img src="${project.image}" class="thumbnail" alt="${project.title}">
-    //                 <div class="txt_box">
-    //                 ${typesHtml}
-    //                 <h4 class="tit">${project.title}</h4>
-    //                 </div>
-    //                 <div class="hover_txt_box">
-    //                 <div class="txt_box_wr">
-    //                     ${typesHtml}
-    //                     <h4 class="tit">${project.title}</h4>
-    //                 </div>
-    //                 </div>
-    //             </a>
-    //             `;
-
-    //             portfolioList.appendChild(workItem);
-    //         });
-
-    //         // work_item 생성 끝난 후에 이걸 해야 함
-    //         $("#work .cate .cate_menu a").click(function (e) {
-    //             e.preventDefault();
-    //             $("#work .cate .cate_menu").removeClass("on");
-    //             $(this).parent().addClass("on");
-
-    //             let cate = $(this).attr("title");
-    //             $(".work_wr .work_item").hide();
-
-    //             if (cate == "all") {
-    //             $(".work_wr .work_item").show();
-    //             } else {
-    //             // --- 2. 여기를 수정: data-type 속성에 'cate' 변수가 포함된 요소를 찾습니다.
-    //             $(".work_wr .work_item[data-type*=" + cate + "]").show();
-    //             }
-    //         });
-    //         })
-    //         .catch(error => {
-    //             console.error('데이터를 불러오는 중 에러 발생:', error);
-    //         });
-    // }
-
-
     function displayProjects() {
-    const portfolioList = document.querySelector('.work_wr');
+        const portfolioList = document.querySelector('.work_wr');
 
-    fetch('js/work_data.json')
-        .then(response => response.json())
-        .then(projects => {
+        fetch('js/work_data.json')
+            .then(response => response.json())
+            .then(projects => {
             projects.forEach(project => {
                 const workItem = document.createElement('div');
                 workItem.classList.add('work_item');
+                
+                // --- 1. 여기를 수정: project.type 배열을 공백으로 구분된 문자열로 만듭니다.
+                // 예를 들어 ["web", "uiux"]는 "web uiux"가 됩니다.
+                workItem.setAttribute('data-type', project.type.join(' ')); 
 
-                // 프로젝트의 'type' 배열을 공백으로 구분된 문자열로 변환합니다.
-                // 예: ["web", "uiux"] -> "web uiux"
-                workItem.setAttribute('data-type', project.type.join(' '));
-
-                // 화면에 표시될 태그를 생성합니다.
-                const typesHtml = project.type.map(type => {
-                    // JSON 태그를 보기 좋은 텍스트로 변환합니다.
-                    const displayType = {
-                        'web': 'Web',
-                        // 'uiux': 'UI/UX', // 추가된 태그
-                        'app': 'App',
-                        'graphic': 'Graphic',
-                        'dev': 'Dev',
-                        'etc': 'Etc'
-                    }[type] || type.toUpperCase(); 
-
-                    return `<span class="work_type">${displayType}</span>`;
-                }).join('');
+                // work_type 스팬에도 모든 태그를 표시하도록 수정합니다.
+                const typesHtml = project.type.map(type => `<span class="work_type">${type}</span>`).join('');
 
                 workItem.innerHTML = `
-                    <a href="${project.link}" class="work_item_wr">
-                        <img src="${project.image}" class="thumbnail" alt="${project.title}">
-                        <div class="txt_box">
-                            <h4 class="tit">${project.title}</h4>
-                            <div class="work_type_tags">${typesHtml}</div>
-                        </div>
-                        <div class="hover_txt_box">
-                            <div class="txt_box_wr">
-                                <h4 class="tit">${project.title}</h4>
-                                <div class="work_type_tags">${typesHtml}</div>
-                            </div>
-                        </div>
-                    </a>
+                <a href="${project.link}" class="work_item_wr">
+                    <img src="${project.image}" class="thumbnail" alt="${project.title}">
+                    <div class="txt_box">
+                    ${typesHtml}
+                    <h4 class="tit">${project.title}</h4>
+                    </div>
+                    <div class="hover_txt_box">
+                    <div class="txt_box_wr">
+                        ${typesHtml}
+                        <h4 class="tit">${project.title}</h4>
+                    </div>
+                    </div>
+                </a>
                 `;
 
                 portfolioList.appendChild(workItem);
             });
 
-            // 필터링 버튼 클릭 이벤트는 work_item이 생성된 후 실행되어야 합니다.
+            // work_item 생성 끝난 후에 이걸 해야 함
             $("#work .cate .cate_menu a").click(function (e) {
                 e.preventDefault();
                 $("#work .cate .cate_menu").removeClass("on");
@@ -309,17 +238,17 @@ $(function () {
                 $(".work_wr .work_item").hide();
 
                 if (cate == "all") {
-                    $(".work_wr .work_item").show();
+                $(".work_wr .work_item").show();
                 } else {
-                    // data-type 속성에 'cate' 변수가 포함되어 있는지 확인합니다.
-                    $(".work_wr .work_item[data-type*=" + cate + "]").show();
+                // --- 2. 여기를 수정: data-type 속성에 'cate' 변수가 포함된 요소를 찾습니다.
+                $(".work_wr .work_item[data-type*=" + cate + "]").show();
                 }
             });
-        })
-        .catch(error => {
-            console.error('데이터를 불러오는 중 에러 발생:', error);
-        });
-}
+            })
+            .catch(error => {
+                console.error('데이터를 불러오는 중 에러 발생:', error);
+            });
+    }
     
       
       // 페이지 로드되면 함수 실행
