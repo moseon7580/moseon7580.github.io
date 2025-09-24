@@ -138,57 +138,116 @@ $(function () {
     
 
 
+    // function displayProjects() {
+    //     const portfolioList = document.querySelector('.work_wr');
+      
+    //     fetch('js/work_data.json')
+    //       .then(response => response.json())
+    //       .then(projects => {
+    //         projects.forEach(project => {
+    //           const workItem = document.createElement('div');
+    //           workItem.classList.add('work_item');
+    //           workItem.setAttribute('data-type', project.type);
+      
+    //           workItem.innerHTML = `
+    //             <a href="${project.link}" class="work_item_wr">
+    //               <img src="${project.image}" class="thumbnail" alt="${project.title}">
+    //               <div class="txt_box">
+    //                 <span class="work_type">${project.type}</span>
+    //                 <h4 class="tit">${project.title}</h4>
+    //               </div>
+    //               <div class="hover_txt_box">
+    //                 <div class="txt_box_wr">
+    //                   <span class="work_type">${project.type}</span>
+    //                   <h4 class="tit">${project.title}</h4>
+    //                 </div>
+    //               </div>
+    //             </a>
+    //           `;
+      
+    //           portfolioList.appendChild(workItem);
+    //         });
+    
+    //         // work_item 생성 끝난 후에 이걸 해야 함
+    //         $("#work .cate .cate_menu a").click(function (e) {
+    //             e.preventDefault();
+    //             $("#work .cate .cate_menu").removeClass("on");
+    //             $(this).parent().addClass("on");
+            
+    //             let cate = $(this).attr("title");
+    //             $(".work_wr .work_item").hide();
+            
+    //             if (cate == "all") {
+    //                 $(".work_wr .work_item").show();
+    //             } else {
+    //                 $(".work_wr .work_item[data-type=" + cate + "]").show();
+    //             }
+    //         });
+            
+    
+    //       })
+    //       .catch(error => {
+    //         console.error('데이터를 불러오는 중 에러 발생:', error);
+    //       });
+    // }
+
+
     function displayProjects() {
         const portfolioList = document.querySelector('.work_wr');
-      
+
         fetch('js/work_data.json')
-          .then(response => response.json())
-          .then(projects => {
+            .then(response => response.json())
+            .then(projects => {
             projects.forEach(project => {
-              const workItem = document.createElement('div');
-              workItem.classList.add('work_item');
-              workItem.setAttribute('data-type', project.type);
-      
-              workItem.innerHTML = `
+                const workItem = document.createElement('div');
+                workItem.classList.add('work_item');
+                
+                // --- 1. 여기를 수정: project.type 배열을 공백으로 구분된 문자열로 만듭니다.
+                // 예를 들어 ["web", "uiux"]는 "web uiux"가 됩니다.
+                workItem.setAttribute('data-type', project.type.join(' ')); 
+
+                // work_type 스팬에도 모든 태그를 표시하도록 수정합니다.
+                const typesHtml = project.type.map(type => `<span class="work_type">${type}</span>`).join('');
+
+                workItem.innerHTML = `
                 <a href="${project.link}" class="work_item_wr">
-                  <img src="${project.image}" class="thumbnail" alt="${project.title}">
-                  <div class="txt_box">
-                    <span class="work_type">${project.type}</span>
+                    <img src="${project.image}" class="thumbnail" alt="${project.title}">
+                    <div class="txt_box">
+                    ${typesHtml}
                     <h4 class="tit">${project.title}</h4>
-                  </div>
-                  <div class="hover_txt_box">
-                    <div class="txt_box_wr">
-                      <span class="work_type">${project.type}</span>
-                      <h4 class="tit">${project.title}</h4>
                     </div>
-                  </div>
+                    <div class="hover_txt_box">
+                    <div class="txt_box_wr">
+                        ${typesHtml}
+                        <h4 class="tit">${project.title}</h4>
+                    </div>
+                    </div>
                 </a>
-              `;
-      
-              portfolioList.appendChild(workItem);
+                `;
+
+                portfolioList.appendChild(workItem);
             });
-    
+
             // work_item 생성 끝난 후에 이걸 해야 함
             $("#work .cate .cate_menu a").click(function (e) {
                 e.preventDefault();
                 $("#work .cate .cate_menu").removeClass("on");
                 $(this).parent().addClass("on");
-            
+
                 let cate = $(this).attr("title");
                 $(".work_wr .work_item").hide();
-            
+
                 if (cate == "all") {
-                    $(".work_wr .work_item").show();
+                $(".work_wr .work_item").show();
                 } else {
-                    $(".work_wr .work_item[data-type=" + cate + "]").show();
+                // --- 2. 여기를 수정: data-type 속성에 'cate' 변수가 포함된 요소를 찾습니다.
+                $(".work_wr .work_item[data-type*=" + cate + "]").show();
                 }
             });
-            
-    
-          })
-          .catch(error => {
-            console.error('데이터를 불러오는 중 에러 발생:', error);
-          });
+            })
+            .catch(error => {
+                console.error('데이터를 불러오는 중 에러 발생:', error);
+            });
     }
     
       
